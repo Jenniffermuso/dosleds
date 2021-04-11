@@ -1,8 +1,22 @@
 //https://www.eclipse.org/paho/clients/js/
 
-
-
-
+function LED1_On() {
+	//alert("led on");
+	console.log("led on");
+	//document.getElementById("sensor").innerHTML="led on";
+	message = new Paho.MQTT.Message("ON");
+	message.destinationName = "jenniffermuso26@gmail.com/te2";
+	client.send(message);
+  
+}
+function LED1_Off(){	
+	//alert("led off");
+	console.log("led off");
+	//document.getElementById("sensor").innerHTML="led off";
+	message = new Paho.MQTT.Message("OFF");
+	message.destinationName = "jenniffermuso26@gmail.com/te2";
+	client.send(message);
+}
 
 
 // Create a client instance
@@ -45,23 +59,6 @@
     }
   }
 
-function LED1_On() {
-	//alert("led on");
-	console.log("led on");
-	//document.getElementById("sensor").innerHTML="led on";
-	message = new Paho.MQTT.Message("ON");
-	message.destinationName = "jenniffermuso26@gmail.com/te2";
-	client.send(message);
-  
-}
-function LED1_Off(){	
-	//alert("led off");
-	console.log("led off");
-	//document.getElementById("sensor").innerHTML="led off";
-	message = new Paho.MQTT.Message("OFF");
-	message.destinationName = "jenniffermuso26@gmail.com/te2";
-	client.send(message);
-}
 
 
   // called when a message arrives
