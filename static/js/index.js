@@ -66,9 +66,9 @@ function LED1_Off(){
   // called when a message arrives
   function onMessageArrived(message) {
 	  if (message.destinationName == "jenniffermuso26@gmail.com/te2"){
-	  document.getElementById("sensor1").innerHTML=message.payloadString;}
+	  	document.getElementById("sensor1").innerHTML=message.payloadString;}
 	  if(message.destinationName == "jenniffermuso26@gmail.com/te3"){
-	  document.getElementById("sensor2").innerHTML=message.payloadString;}
+	  	document.getElementById("sensor2").innerHTML=message.payloadString;}
 	  
   }
   
